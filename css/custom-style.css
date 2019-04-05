@@ -1,0 +1,717 @@
+/* Custom Style Css */
+/*Css for schedule task popup*/
+@import url("include-font.css");
+
+body {
+     overflow: visible;
+}
+
+
+     
+
+     .schedule_main {
+    width: 800px;
+    margin: auto;
+}
+.hide-custom {
+     display: none;
+}
+ #myModal{
+     display: none;
+}
+ .modal-body{
+     min-height: 300px;
+}
+ .loader {
+     display: block;
+     text-align: center;
+     position: fixed;
+     position: fixed;
+     z-index: 999;
+     height: 2em;
+     width: 2em;
+     overflow: show;
+     margin: auto;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+}
+ .date_content a {
+     font-size: 16px;
+     font-weight: 500;
+}
+ .date_content ul{
+     margin: 0;
+     display: table;
+     width: 100%;
+     margin-left: 6px;
+     table-layout: fixed;
+     padding: 10px 20px;
+}
+ .date_content ul li {
+     float: right;
+     display: table-cell;
+     width: 100%;
+     float: none;
+}
+ .date_content #current_date{
+     padding-bottom: 10px;
+     text-align: center;
+}
+ .date_week a {
+     position: absolute;
+     top: 40px;
+     cursor: pointer;
+}
+ .date_week a.date-next {
+     right: 0;
+}
+ .container{
+     position: relative;
+}
+ .date_week ul{
+     list-style-type: none;
+}
+ .disable {
+     cursor: not-allowed !important;
+     opacity: 0.65;
+     filter: alpha(opacity=65);
+     box-shadow: none;
+     pointer-events: none;
+}
+/* Design */
+ .schedule_main{
+     border-top: 1px solid rgba(168,172,177,0.3);
+}
+
+.schedule_main a{
+     display: block;
+}
+ .schedule_main_inner {
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+     padding: 15px 0;
+     color: #181a1d;
+     padding: 20px 0;
+}
+ .sch_time {
+     font-family: "Roboto",sans-serif;
+     font-weight: 300;
+     -webkit-letter-spacing: 0.025em;
+     -moz-letter-spacing: 0.025em;
+     -ms-letter-spacing: 0.025em;
+     letter-spacing: 0.025em;
+     line-height: 1.5em;
+     font-size: 16px;
+     -webkit-letter-spacing: 0.4px;
+     -moz-letter-spacing: 0.4px;
+     -ms-letter-spacing: 0.4px;
+     letter-spacing: 0.4px;
+     font-weight: normal;
+     width: 109px;
+}
+ .sch_info {
+     -webkit-flex: 1;
+     -ms-flex: 1;
+     flex: 1;
+     overflow: hidden;
+}
+ .sch_img {
+     display: block;
+     float: left;
+     margin-right: 20px;
+}
+ .sch_title {
+     font-family: "Roboto",sans-serif;
+     font-weight: 300;
+     -webkit-letter-spacing: 0.025em;
+     -moz-letter-spacing: 0.025em;
+     -ms-letter-spacing: 0.025em;
+     letter-spacing: 0.025em;
+     line-height: 1.5em;
+     font-size: 16px;
+     -webkit-letter-spacing: 0.4px;
+     -moz-letter-spacing: 0.4px;
+     -ms-letter-spacing: 0.4px;
+     letter-spacing: 0.4px;
+}
+ .sch_trainer {
+     font-family: "Roboto",sans-serif;
+     font-weight: 300;
+     -webkit-letter-spacing: 0.025em;
+     -moz-letter-spacing: 0.025em;
+     -ms-letter-spacing: 0.025em;
+     letter-spacing: 0.025em;
+     line-height: 1.5em;
+     font-size: 10px;
+     line-height: 1.3em;
+     font-weight: 500;
+     text-transform: uppercase;
+     white-space: nowrap;
+     padding-bottom: 3px;
+}
+ .sch_counter {
+     padding-left: 10px;
+     -webkit-align-self: center;
+     -ms-flex-item-align: center;
+     align-self: center;
+}
+ .kAkaB {
+     background-color: transparent;
+     border: solid 1px #777a81;
+}
+ .gIMiMJ {
+     border: solid 1px #777a81;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+}
+ .day{
+     margin: 0 auto;
+     font-family: brandon-grotesque,sans-serif;
+     font-weight: 700;
+     text-transform: uppercase;
+     -webkit-letter-spacing: 0.1em;
+     -moz-letter-spacing: 0.1em;
+     -ms-letter-spacing: 0.1em;
+     letter-spacing: 0.1em;
+     line-height: 1.375em;
+     font-size: 16px;
+     width: 50px;
+     height: 50px;
+     padding-top: 0;
+     padding-left: 3px;
+     border-color: #777a81;
+     font-family: brandon-grotesque,sans-serif;
+     font-weight: 700;
+     text-transform: uppercase;
+     -webkit-letter-spacing: 0.1em;
+     -moz-letter-spacing: 0.1em;
+     -ms-letter-spacing: 0.1em;
+     letter-spacing: 0.1em;
+     line-height: 1.375em;
+     font-size: 14px;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     border: solid 1px #2c2d33;
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-align-items: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     align-items: center;
+     -webkit-box-pack: center;
+     -webkit-justify-content: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+     padding-top: 1px;
+     padding-left: 2px;
+     -webkit-transition-property: background-color,color;
+     transition-property: background-color,color;
+     -webkit-transition-duration: 250ms;
+     transition-duration: 250ms;
+     -webkit-transition-timing-function: ease;
+     transition-timing-function: ease;
+}
+ .day_active .day{
+     color: #ffffff;
+     background-color: #ff3347;
+     border-color: #ff3347;
+}
+ .day_active .week {
+     color: #ff3347;
+}
+ .week{
+     font-weight: 700;
+     text-transform: uppercase;
+     -webkit-letter-spacing: 0.1em;
+     -moz-letter-spacing: 0.1em;
+     -ms-letter-spacing: 0.1em;
+     letter-spacing: 0.1em;
+     line-height: 1.375em;
+     font-size: 14px;
+     padding-bottom: 5px;
+}
+ .abcd{
+     cursor: pointer;
+     -webkit-transition-property: color,fill;
+     transition-property: color,fill;
+     -webkit-transition-duration: 250ms;
+     transition-duration: 250ms;
+     -webkit-transition-timing-function: ease;
+     transition-timing-function: ease;
+     color: #777a81;
+     -webkit-fill: #777a81;
+     fill: #777a81;
+     text-align: center;
+     color: #777a81;
+}
+ .main_date_section{
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-flex-direction: column;
+     -ms-flex-direction: column;
+     flex-direction: column;
+     background-color: #eeeeee;
+     top: -1px;
+     position: -webkit-sticky;
+     position: fixed;
+     width: 100%;
+     z-index: 9999;
+     left: 0;
+     right: 0;
+}
+ .akCPy {
+     -webkit-align-items: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     align-items: center;
+     background-color: white;
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-flex-direction: column;
+     -ms-flex-direction: column;
+     flex-direction: column;
+     margin-left: auto;
+     margin-right: auto;
+     padding-bottom: 40px;
+     padding-top: 40px;
+     text-align: center;
+}
+ .dPPLLi {
+     padding-bottom: 40px;
+}
+ .uvGLZ {
+     font-family: "Roboto",sans-serif;
+     font-weight: 300;
+     -webkit-letter-spacing: 0;
+     -moz-letter-spacing: 0;
+     -ms-letter-spacing: 0;
+     letter-spacing: 0;
+     line-height: 1.375em;
+     font-size: 20px;
+     color: #181a1d;
+}
+ .ebSqhe {
+     padding-top: 30px;
+     padding-bottom: 30px;
+}
+ .eHuGKS {
+     font-family: "Roboto",sans-serif;
+     font-weight: 300;
+     -webkit-letter-spacing: 0.025em;
+     -moz-letter-spacing: 0.025em;
+     -ms-letter-spacing: 0.025em;
+     letter-spacing: 0.025em;
+     line-height: 1.5em;
+     font-size: 13px;
+     -webkit-letter-spacing: 0.325px;
+     -moz-letter-spacing: 0.325px;
+     -ms-letter-spacing: 0.325px;
+     letter-spacing: 0.325px;
+     color: #181a1d;
+}
+ .txt-center {
+     text-align: center;
+}
+ .eqsbaX {
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-align-items: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     align-items: center;
+     -webkit-box-pack: center;
+     -webkit-justify-content: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+     margin-top: 10px;
+     padding-bottom: 5px;
+}
+ .lbjqAh {
+     font-size: 18px;
+     -webkit-letter-spacing: 0.45px;
+     -moz-letter-spacing: 0.45px;
+     -ms-letter-spacing: 0.45px;
+     letter-spacing: 0.45px;
+}
+ .cnKhUU {
+     -webkit-transition-property: height;
+     transition-property: height;
+     -webkit-transition-duration: 250ms;
+     transition-duration: 250ms;
+     -webkit-transition-timing-function: ease;
+     transition-timing-function: ease;
+}
+ .eoAdLg {
+     font-family: Roboto-Light !important;
+     font-weight: 300;
+     -webkit-letter-spacing: 0.025em;
+     -moz-letter-spacing: 0.025em;
+     -ms-letter-spacing: 0.025em;
+     letter-spacing: 0.025em;
+     line-height: 1.5em;
+     font-size: 12px;
+     -webkit-letter-spacing: 0.325px;
+     -moz-letter-spacing: 0.325px;
+     -ms-letter-spacing: 0.325px;
+     letter-spacing: 0.325px;
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 400px;
+     padding-bottom: 15px;
+}
+ .scheduler-title {
+     font-family: Brandon_med;
+     text-transform: uppercase;
+     letter-spacing: 0.1em;
+     line-height: 1.375em;
+     font-size: 16px;
+     height: 50px;
+     background-color: #f5f7f9;
+     align-items: center;
+     display: flex;
+     justify-content: center;
+     color: #a8acb1;
+}
+ .current_date {
+     font-family: Brandon_med;
+     text-transform: uppercase;
+     letter-spacing: 0.1em;
+     line-height: 1.375em;
+     font-size: 16px;
+     height: 50px;
+     background-color: #f5f7f9;
+     align-items: center;
+     display: flex;
+     justify-content: center;
+     color: #181a1d;
+}
+ .all-dates-container .main_date_section1 {
+     background-color: #ffffff;
+}
+ #scheduler {
+     overflow: visible;
+}
+ .all-dates-container {
+     position: sticky;
+     position: -webkit-sticky;
+     /*top: 90px;*/
+     top: 0px;
+     z-index: 99;
+     background-color: #ffffff;
+}
+ .current_date {
+     position: sticky;
+     position: -webkit-sticky;
+     /*top: 240px;*/
+     top: 153px;
+     z-index: 9;
+}
+ .btn-count-me-in {
+     background-color: transparent;
+     box-shadow: none;
+     border: 2.5px solid #000000;
+     color: #000000;
+     line-height: 34px;
+     padding: 0px;
+     min-width: 180px;
+     font-family: Brandon_med !important;
+     letter-spacing: 1.3px;
+     font-size: 13px;
+     text-transform: uppercase;
+}
+ .btn-count-me-in:hover, .btn-count-me-in:active, .btn-count-me-in:focus {
+     background-color: #000000;
+     color: #ffffff;
+}
+ .schedule-popup-heading {
+     font-family: Roboto-Light !important;
+     font-weight: 300;
+     -webkit-letter-spacing: 0;
+     -moz-letter-spacing: 0;
+     -ms-letter-spacing: 0;
+     letter-spacing: 0;
+     line-height: 1.375em;
+     font-size: 28px;
+     color: #181a1d;
+}
+ .schedule-popup-btn-added-to-calender {
+     background-color: #ff3347 !important;
+     line-height: 34px;
+     text-transform: uppercase;
+     font-size: 13px;
+     border: 3px solid #ff3347;
+     height: 40px;
+     padding: 0px 20px;
+     font-family: Brandon_med !important;
+     letter-spacing: 0.1em;
+     color: #ffffff;
+     border-radius: 25px;
+}
+ .schedule-popup-btn-added-to-calender:hover, .schedule-popup-btn-added-to-calender:focus, .schedule-popup-btn-added-to-calender:active {
+     background-color: #d9182b;
+     border: 3px solid #d9182b;
+}
+ .schedule-popup-book-class {
+     background-color: transparent;
+     box-shadow: none;
+     border: 2.5px solid #000000;
+     color: #000000;
+     line-height: 34px;
+     padding: 0px 40px;
+     font-family: Brandon_med !important;
+     letter-spacing: 1.3px;
+     font-size: 13px;
+}
+ .schedule-popup-book-class:hover {
+     background-color: #000000;
+     color: #ffffff;
+}
+ .schedule-popup-question {
+     font-family: Roboto-Light !important;
+}
+ .schedule-popup-instructor-name {
+     font-family: Roboto-Medium !important;
+     color: #000000;
+     line-height: 1.5em;
+     font-size: 14px;
+     letter-spacing: 0.35px;
+     text-transform: uppercase;
+}
+ .schedule-popup-title {
+     font-family: Roboto-Light !important;
+     color: #181a1d;
+     cursor: pointer;
+}
+.btn-count-me-out {
+     background-color: transparent;
+     box-shadow: none;
+     border: 2.5px solid #ff3347;
+     color: #ff3347;
+     line-height: 34px;
+     padding: 0px;
+     min-width: 180px;
+     font-family: Brandon_med !important;
+     letter-spacing: 1.3px;
+     font-size: 13px;
+     text-transform: uppercase;
+}
+.btn-count-me-out:hover, .btn-count-me-out:active, .btn-count-me-out:focus {
+    background-color: transparent;
+}
+.link-add-to-my-calendar {
+     width: 280px;
+     margin: auto;
+     height: 40px;
+     display: none;
+     align-items: center;
+     justify-content: center;
+     background-color: #f5f7f9;
+     margin-top: 20px;
+}
+ .link-add-to-my-calendar a {
+     font-family: Roboto-Regular !important;
+     line-height: 1.5em;
+     font-size: 14px;
+     letter-spacing: 0.35px;
+     color: #181a1d;
+}
+.spin-me-180-deg {
+     transition: all 0.2s ease;
+     transition-timing-function: ease-in-out;
+     transition-duration: 0.2s;
+     transform: rotate3d(0, 0, 1, 180deg);
+}
+.main_date_section1 .date_content {
+     /*width: 800px;*/
+     max-width: 800px;
+     margin: auto;
+     display: flex;
+     align-items: center;
+}
+
+/* -------------------------------------------
+               CUSTOM POPUP CSS
+------------------------------------------- */
+.vividmodal ,.form_vividmodal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.vividmodal-content ,.form_vividmodal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    /*width: 80%;*/
+    width: 40%;
+}
+
+.form_vividmodal-body .form_model_content{
+     padding: 30px;
+}
+
+.form_vividmodal-body .form_model_content h3{
+    text-align: center;
+}
+
+.form_vividmodal-body label {
+    display: block;
+    text-align: left;
+    line-height: 3;
+    font-weight: 700;
+}
+
+.form_submit_btn input[type="submit"] {
+    width: 100%;
+    /* padding: 10px; */
+    margin: 15px 0;
+    color: #ffffff;
+    background-color: #ff3347 !important;
+}
+
+
+ul.popup_ul ,ul.popup_social {
+    list-style: none;
+    
+    padding: 0;
+}
+
+ul.popup_ul li:first-child {
+    margin-right: 15px;
+}
+
+ul.popup_ul li , ul.popup_social > li {
+    display: inline-block;
+}
+
+ul.popup_social > li > a {
+    padding: 10px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    display: inline;
+}
+
+.sch_title_p {
+    text-align: left;
+    font-weight: 800;
+    padding: 0;
+    margin: 0;
+}
+
+.sch_trainer_p{
+     text-align: left;
+}
+
+/* The Close Button */
+.vividclose ,.form_vividclose {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.vividclose:hover,
+.vividclose:focus,.form_vividclose:hover,.form_vividclose:focus  {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form_vividmodal-body {
+    text-align: left;
+}
+#form_schedule_notification input[type="text"],#form_schedule_notification input[type="email"],#form_schedule_notification input[type="url"],#form_schedule_notification input[type="password"],#form_schedule_notification input[type="search"] {
+     width: 100%;
+     padding: 7px 14px 9px;
+}
+.spin-me-360
+{
+    display: flex;
+    margin: auto;
+    animation-name: rotateme;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes rotateme
+{
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@media only screen  and (max-width : 320px)
+{
+     .day { width: 30px !important; height: 30px !important; border: none !important; }
+     .week { width: fit-content !important; font-size: 10px !important; margin: 0 auto !important; }
+     .list-inline.date_ul { display: flex !important; /*width: unset !important; */ padding: 10px 0px !important; margin-left: 0px !important; }
+     #scheduler .main_date_section1 .date_content { width: unset !important; justify-content: center !important; }
+     #scheduler .scheduler-custom-width { padding-left: 0px !important; padding-right: 0px !important; }
+     #scheduler .today_dt .schedule_main { width: unset !important; padding: 0px 20px !important;}
+     #scheduler .today_dt .schedule_main .sch_img { display: none !important; }
+     .current_date { top: 115px !important; }
+     .all-dates-container { top: 0px !important; }
+     #scheduler .today_dt .schedule_main .sch_time { width: unset !important; font-size: 13px !important; }
+     #scheduler .today_dt .schedule_main .sch_title { font-size: 13px !important; }
+     .btn-count-me-in { font-size: 0px !important; min-width: 30px !important; border-radius: 50%; width: 35px !important; border: 1px solid #000000 !important; }
+     .btn-count-me-out { font-size: 0px !important; min-width: 30px !important; border-radius: 50%; width: 35px !important; border: 1px solid #ff3347 !important; }
+     .count { display: none !important; }
+     .sch_info { text-align: left !important; padding-left: 15px; }
+     .current_date { font-size: 13px !important; height: 30px !important; }
+
+     .vividmodal-content ,.form_vividmodal-content { width: 90% !important; }
+}
+
+@media only screen and (min-width : 321px) and (max-width : 480px) {
+     .day { width: 30px !important; height: 30px !important; border: none !important; }
+     .week { width: fit-content !important; font-size: 10px !important; margin: 0 auto !important; }
+     .list-inline.date_ul { display: flex !important; /*width: unset !important; */ padding: 10px 0px !important; margin-left: 0px !important; }
+     #scheduler .main_date_section1 .date_content { width: unset !important; justify-content: center !important; }
+     #scheduler .scheduler-custom-width { padding-left: 0px !important; padding-right: 0px !important; }
+     #scheduler .today_dt .schedule_main { width: unset !important; padding: 0px 20px !important;}
+     #scheduler .today_dt .schedule_main .sch_img { display: none !important; }
+     .current_date { top: 115px !important; }
+     .all-dates-container { top: 0px !important; }
+     #scheduler .today_dt .schedule_main .sch_time { width: unset !important; font-size: 13px !important; }
+     #scheduler .today_dt .schedule_main .sch_title { font-size: 13px !important; }
+     .btn-count-me-in { font-size: 0px !important; min-width: 30px !important; border-radius: 50%; width: 35px !important; border: 1px solid #000000 !important; }
+     .btn-count-me-out { font-size: 0px !important; min-width: 30px !important; border-radius: 50%; width: 35px !important; border: 1px solid #ff3347 !important; }
+     .count { display: none !important; }
+     .sch_info { text-align: left !important; padding-left: 15px; }
+     .current_date { font-size: 13px !important; height: 30px !important; }
+
+     .vividmodal-content ,.form_vividmodal-content{ width: 90% !important; }
+}
+
+@media (min-width: 768px) {
+     .vividmodal-content ,.form_vividmodal-content{ width: 60% !important; }
+}
